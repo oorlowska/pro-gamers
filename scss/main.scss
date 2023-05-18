@@ -208,6 +208,7 @@ body {
 			padding: 15px;
 			margin: 0 10px;
 			transition: 0.3s;
+			background-color: $white;
 		}
 
 		i {
@@ -217,6 +218,22 @@ body {
 	}
 
 	.team {
+		position: relative;
+		background-image: url(../img/biuro_1920.jpg);
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+
+		.team-shadow {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: -5;
+		}
+
 		span {
 			color: black;
 			font-weight: bold;
@@ -226,7 +243,11 @@ body {
 		i {
 			font-size: 18px;
 			color: $team-socials;
-			padding: 3px 20px;
+			padding: 3px 10px;
+		}
+
+		h2 {
+			color: $white;
 		}
 
 		.card-text {
@@ -237,6 +258,18 @@ body {
 			margin-bottom: 10px;
 		}
 
+		.card {
+			transition: 0.5s;
+
+			img {
+				height: 250px;
+				object-fit: cover;
+			}
+		}
+
+		.card:hover {
+			transform: scale(.95);
+		}
 	}
 }
 
