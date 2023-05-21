@@ -17,30 +17,24 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	background-color: #333333;
 	height: 30vh;
-	width: 100%;
+	width: 100vw;
 	background-size: cover;
 
-	.main {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		width: 100%;
-		height: 100%;
-		background-image: url(../img/game-console_640.jpg);
-		background-position: center;
-		background-size: cover;
-		background-attachment: fixed;
-		z-index: -1;
-		opacity: 0.5;
-	}
-
-	.shadow-bg {
-		background-color: rgba(0, 0, 0, 0.85);
+	span {
+		color: $blue-color;
 	}
 
 	h2 {
 		text-align: center;
 		text-transform: uppercase;
+	}
+
+	i {
+		font-size: 30px;
+	}
+
+	.shadow-bg {
+		background-color: rgba(0, 0, 0, 0.85);
 	}
 
 	.underline {
@@ -49,57 +43,121 @@ body {
 		height: 4px;
 		background-color: $blue-color;
 	}
+}
 
-	.underline-2 {
-		margin: 0 auto 10px;
-		width: 300px;
-		height: 2px;
-		background-color: rgba(0, 0, 0, 0.1);
+nav {
+	text-transform: uppercase;
+	transition: 0.6s;
+
+	.nav-link {
+		color: $white;
 	}
 
-	nav {
+	a:hover {
+		color: $blue-color;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+	}
+
+	.active {
+		color: $blue-color;
+	}
+
+	i {
+		padding: 10px;
+		color: $white;
+		letter-spacing: 3px;
+		transition: 0.3s;
+	}
+
+	i:hover {
+		color: $blue-color;
+	}
+}
+
+header {
+	color: $white;
+
+	h1 {
+		font-size: 30px;
 		text-transform: uppercase;
-		transition: 0.6s;
-
-		.nav-link {
-			color: $white;
-		}
-
-		a:hover {
-			color: $blue-color;
-		}
-
-		.navbar-brand {
-			font-weight: bold;
-		}
-
-		.active {
-			color: $blue-color;
-		}
-
-		i {
-			padding: 10px;
-			color: $white;
-			letter-spacing: 3px;
-			transition: 0.3s;
-		}
-
-		i:hover {
-			color: $blue-color;
-		}
 	}
 
-	.aboutus-2 {
-		position: absolute;
-		background-image: url(../img/procesor__640.jpg);
-		height: 300px;
-		width: 100%;
+	p {
+		font-size: 14px;
+	}
+
+	.hero-image {
+		position: relative;
+		height: 100vh;
+		background-image: url('/img/game-console_640.jpg');
 		background-position: center;
 		background-size: cover;
 		background-attachment: fixed;
-		z-index: -1;
-		opacity: 0.5;
+		z-index: 0;
 	}
+
+	.hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -10;
+	}
+
+	.hero-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		padding: 10px;
+		text-align: center;
+		z-index: 5;
+	}
+
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+
+	.fa-chevron-down {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 20px;
+		font-size: 30px;
+		color: $white;
+	}
+}
+
+.aboutus {
+	.aboutus-card-title {
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+
+	.aboutus-hover {
+		transition: 0.3s;
+	}
+
+	.aboutus-hover:hover {
+		color: $blue-color;
+	}
+}
+
+.aboutus-2 {
+	position: relative;
+	background-image: url(/img/procesor__640.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
 
 	.container-aboutus-2 {
 		padding-top: 3rem;
@@ -108,6 +166,17 @@ body {
 		width: 100%;
 	}
 
+	.aboutus-2-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.65);
+		z-index: -5;
+	}
+}
+
+.portfolio {
 	.container-portfolio {
 		position: relative;
 		display: flex;
@@ -141,136 +210,107 @@ body {
 		padding: 5px;
 		border: 0;
 	}
+}
 
-	.hero-text {
-		padding: 10px;
+.prices {
+	background-color: $bg-prices;
+
+	h3 {
+		color: $blue-color;
+	}
+
+	span {
+		color: black;
+		font-weight: bold;
+	}
+
+	.exact-price {
+		font-size: 28px;
+	}
+
+	.prices-info {
+		margin-top: 25px;
 		text-align: center;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		height: 80vh;
+	}
+
+	.price-box {
+		box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.4);
+		padding: 15px;
+		margin: 0 10px;
+		transition: 0.3s;
+		background-color: $white;
+	}
+
+	i {
+		padding: 0 5px;
+		font-size: 15px;
+		transition: 0.3s;
+	}
+
+	.underline-2 {
+		margin: 0 auto 10px;
+		width: 300px;
+		height: 2px;
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	.price-box:hover {
+		transform: scale(1.05);
+	}
+}
+
+.team {
+	position: relative;
+	background-image: url(../img/biuro_1920.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+
+	.team-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -5;
+	}
+
+	span {
+		color: black;
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+	i {
+		font-size: 18px;
+		color: $team-socials;
+		padding: 3px 10px;
+	}
+
+	h2 {
 		color: $white;
-		text-shadow: 0px 0px 7px black;
-		transition: 0.3s;
+	}
 
-		h1 {
-			text-transform: uppercase;
-			font-size: 30px;
-		}
+	.card-text {
+		font-size: 15px;
+	}
 
-		.btn-outline-light {
-			text-transform: uppercase;
-		}
+	.col {
+		margin-bottom: 10px;
+	}
 
-		.fa-chevron-down {
-			padding: 20px;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			font-size: 40px;
-			color: $white;
-			transition: 0.3s;
-		}
+	.card {
+		transition: 0.5s;
 
-		.fa-chevron-down:hover {
-			color: $blue-color;
+		img {
+			height: 250px;
+			object-fit: cover;
 		}
 	}
 
-	.hero-text2 {
-		height: 37vh;
-		transition: 0.3s;
-	}
-
-	.prices {
-		background-color: $bg-prices;
-
-		h3 {
-			color: $blue-color;
-		}
-
-		span {
-			color: black;
-			font-weight: bold;
-		}
-
-		.exact-price {
-			font-size: 28px;
-		}
-
-		.prices-info {
-			margin-top: 25px;
-			text-align: center;
-		}
-
-		.price-box {
-			box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.4);
-			padding: 15px;
-			margin: 0 10px;
-			transition: 0.3s;
-			background-color: $white;
-		}
-
-		i {
-			padding: 0 5px;
-			font-size: 15px;
-		}
-	}
-
-	.team {
-		position: relative;
-		background-image: url(../img/biuro_1920.jpg);
-		background-position: center;
-		background-size: cover;
-		background-attachment: fixed;
-		z-index: 0;
-
-		.team-shadow {
-			position: absolute;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.5);
-			z-index: -5;
-		}
-
-		span {
-			color: black;
-			font-weight: bold;
-			font-size: 18px;
-		}
-
-		i {
-			font-size: 18px;
-			color: $team-socials;
-			padding: 3px 10px;
-		}
-
-		h2 {
-			color: $white;
-		}
-
-		.card-text {
-			font-size: 15px;
-		}
-
-		.col {
-			margin-bottom: 10px;
-		}
-
-		.card {
-			transition: 0.5s;
-
-			img {
-				height: 250px;
-				object-fit: cover;
-			}
-		}
-
-		.card:hover {
-			transform: scale(1.02);
-		}
+	.card:hover {
+		transform: scale(1.02);
 	}
 }
 
@@ -302,10 +342,6 @@ body {
 
 	.achievement:hover {
 		transform: scale(1.05);
-
-		.achievement-number {
-			color: $blue-color;
-		}
 	}
 }
 
@@ -355,43 +391,14 @@ body {
 		background-color: rgba(0, 0, 0, 0.8);
 		z-index: -5;
 	}
-
-	i:hover {
-		color: $blue-color;
-	}
-
-	.mail:hover {
-		color: $blue-color;
-	}
 }
 
-span {
+i:hover {
 	color: $blue-color;
 }
 
-i {
-	font-size: 30px;
-}
-
-.aboutus-hover:hover {
+.mail:hover {
 	color: $blue-color;
-}
-
-.aboutus-card-title {
-	text-transform: uppercase;
-	font-size: 18px;
-}
-
-.aboutus-card-text {
-	font-size: 14px;
-}
-
-.aboutus-hover {
-	transition: 0.3s;
-}
-
-.price-box:hover {
-	transform: scale(1.05);
 }
 
 @media (min-width: 400px) {
@@ -423,33 +430,9 @@ i {
 }
 
 @media (min-width: 1200px) {
-	body {
-		.main {
-			background-image: url(../img/game-console_1920.jpg);
-		}
-
-		.hero-text h1 {
-			font-size: 42px;
-		}
-
-		.hero-text p {
-			font-size: 20px;
-		}
-
-		.aboutus-2 {
-			background-image: url(../img/procesor_1920.jpg);
+	header {
+		.hero-image {
+			background-image: url('/img/game-console_1920.jpg');
 		}
 	}
-
-	.contact {
-		background-image: url(/img/city_1920.jpg);
-	}
-}
-
-#aboutus {
-	color: black;
-}
-
-.prices {
-	background-color: $bg-prices;
 }
