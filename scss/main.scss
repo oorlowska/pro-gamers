@@ -17,7 +17,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	background-color: #333333;
 	height: 30vh;
-	width: 100vw;
+	width: 100%;
 	background-size: cover;
 
 	span {
@@ -92,7 +92,7 @@ header {
 	.hero-image {
 		position: relative;
 		height: 100vh;
-		background-image: url('/img/game-console_640.jpg');
+		background-image: url('../img/game-console_1920.jpg');
 		background-position: center;
 		background-size: cover;
 		background-attachment: fixed;
@@ -153,7 +153,7 @@ header {
 
 .aboutus-2 {
 	position: relative;
-	background-image: url(/img/procesor__640.jpg);
+	background-image: url('../img/procesor__640.jpg');
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
@@ -261,7 +261,7 @@ header {
 
 .team {
 	position: relative;
-	background-image: url(../img/biuro_1920.jpg);
+	background-image: url('../img/biuro_1920.jpg');
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
@@ -347,7 +347,7 @@ header {
 
 .contact {
 	position: relative;
-	background-image: url(/img/city_640.jpg);
+	background-image: url('../img/city_640.jpg');
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
@@ -432,7 +432,21 @@ i:hover {
 @media (min-width: 1200px) {
 	header {
 		.hero-image {
-			background-image: url('/img/game-console_1920.jpg');
+			background-image: url('../img/game-console_1920.jpg');
+		}
+	}
+
+	main {
+		.aboutus-2 {
+			background-image: url('../img/procesor_1920.jpg');
+		}
+
+		.team {
+			background-image: url('../img/biuro_1920.jpg');
+		}
+
+		.contact {
+			background-image: url('../img/city_1920.jpg');
 		}
 	}
 }
